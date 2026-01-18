@@ -52,33 +52,93 @@
 
 # 1.3 Inheritance
 
-class Person:
-    def __init__(self, name, phone_numer):
-        self.name = name
-        self.phone_number = phone_numer
+# class Person:
+#     def __init__(self, name, phone_numer):
+#         self.name = name
+#         self.phone_number = phone_numer
 
 
-    def get_profile_info(self):
-        return "Name: %s, Phone number: %s" %(self.name, self.phone_number)
+#     def get_profile_info(self):
+#         return "Name: %s, Phone number: %s" %(self.name, self.phone_number)
     
-class Student(Person):
-    def __init__(self, course, *args, **kwargs):
-        self.course = course
-        self.classes = []
-        super(). __init__(*args, **kwargs)
+# class Student(Person):
+#     def __init__(self, course, *args, **kwargs):
+#         self.course = course
+#         self.classes = []
+#         super(). __init__(*args, **kwargs)
 
-    def enrol(self, module):
-        self.classes.append(module)
+#     def enrol(self, module):
+#         self.classes.append(module)
 
-class StaffMember(Person):
-    def __init__(self, *args, **kwargs):
-        self.courses = []
-        super().init (*args, **kwargs)
-    
-    def administrator_for(self, module):
-        self.courses.append(course)
+# class StaffMember(Person):
+#     def __init__(self, *args, **kwargs):
+#         self.courses = []
+#         super().__init__(*args, **kwargs)
 
-    def get_salary(self):
-        return self.salary
+#     def administrator_for(self, module):
+#         self.courses.append(module)
+
+#     def get_salary(self):
+#         return self.salary
+
+# # example usage
+# st1 = Student("Computer Science", "Aayush", "9800000000")
+# print(st1.get_profile_info())
+# st1.enrol("Python Programming")
+# print(st1.classes)
+
+# staff1 = StaffMember("Shah", "9811111111")
+# staff1.administrator_for("AI Systems")
+# print(staff1.get_profile_info())
+# print(staff1.courses)
 
 
+# Getting started
+# 2.1 What will be output for the following code?
+class A:
+    def __init__(self, x= 3):
+        self.x = x
+        
+class der(A):
+    def __init__(self,y = 4):
+        super().__init__()
+        self.y = y
+
+def main():
+    obj = der()
+    print(obj.x, obj.y)
+main()
+
+# Output: 3 4
+
+# 2.2 What will be the output of the following code?
+class Sports:
+    def Play(self):
+        print("Play Games")
+
+    def showResult(self):
+        print("Result of Sports")
+
+class Study:
+    def Exam(self):
+        print("Appear to Exam")
+
+    def showResult(self):
+        print("Result of Exam")
+
+class Student(Sports,Study):
+    def show(self):
+        self.Play()
+        self.Exam()
+        super().Exam()  # can call like this
+        self.showResult()  # Left to Right Search in Parent Classes
+        Study().showResult() # can call like this
+
+S = Student()
+S.show()
+
+# output: Play Games
+# Appear to Exam
+# Appear to Exam
+# Result of Sports
+# Result of Exam
