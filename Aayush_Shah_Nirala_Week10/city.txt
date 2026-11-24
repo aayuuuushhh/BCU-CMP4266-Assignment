@@ -1,0 +1,9 @@
+City;Country;Population
+London;UK;7074265
+Leeds;UK;72693
+Birmingham;UK;1020589
+Rome;IT;2783809
+Milan;IT;1397715
+Tirana;AL;750000
+Athens;GR;664046
+City: kondan
