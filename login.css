@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+.left-panel {
+  width: 375px;
+  background-color: #f5f5f5;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  width: 80px;
+  height: 80px;
+}
+
+.logo svg {
+  width: 100%;
+  height: 100%;
+}
+
+.login-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-header {
+  margin-bottom: 50px;
+}
+
+.form-header h2 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.form-header h1 {
+  font-size: 32px;
+  font-weight: 300;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.form-header p {
+  font-size: 14px;
+  color: #666;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  border-bottom-color: #000;
+}
+
+.form-buttons {
+  margin-top: auto;
+  padding-top: 40px;
+}
+
+.btn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.btn-next {
+  background-color: #d0d0d0;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.btn-next:hover {
+  background-color: #c0c0c0;
+}
+
+.btn-create {
+  background-color: transparent;
+  color: #000;
+  border: 1px solid #000;
+}
+
+.btn-create:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.right-panel {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer-links {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  display: flex;
+  gap: 30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px 30px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: opacity 0.3s;
+}
+
+.footer-links a:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    width: 100%;
+    padding: 40px 30px;
+  }
+
+  .right-panel {
+    display: none;
+  }
+
+  .logo {
+    top: 20px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+  }
+}
